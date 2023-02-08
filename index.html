@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: 40px;
+        }
+        .button {
+            padding: 12px 24px;
+            background-color: red;
+        }
+        .content {
+            display: none;
+        }
+        .content.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="click" id="button1">click</button>
+        <button class="click" id="button2">click2</button>
+
+        <p class="content" id="text1">Hi, chao cau1</p>
+        <p class="content" id="text2">Hi, chao cau2</p>
+
+    </div>
+    <script>
+        let button = document.getElementsByClassName('click');
+        let texts = document.getElementsByClassName('content');
+        for (let i = 0; i < button.length; i++) {
+            button[i].addEventListener('click', () => {
+                if (texts[i].className.includes(' show')) {
+                    Array.from(texts).forEach((text) => {
+                    text.className = text.className.replace(' show', '');
+                })
+                    // texts[i].className = texts[i].className.replace(' show', '');
+                } else {
+                    Array.from(texts).forEach((text) => {
+                    text.className = text.className.replace(' show', '');
+                })
+                    texts[i].className += ' show';
+                }
+            })
+        }
+    </script>
+</body>
+</html>

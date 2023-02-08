@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gojek Vietnam</title>
+    <link rel="icon" type="image/x-icon" href="https://lelogama.go-jek.com/favicon/gojek_32px.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="https://kit.fontawesome.com/e231441ca7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="header-wrapper">
+            <div class="container">
+                <div class="header-menu">
+                    <div class="header-menu-logo">
+                            <img src="https://lelogama.go-jek.com/service_icon_text/gojek-horizontal-logo-solid.svg" alt="gojek" class="logo" >
+                    </div>
+                    <div class="header-menu-empty"></div>
+                    <div class="header-menu-nav">
+                        <span class="header-menu-nav-items">
+                            <a href="#">about us</a>
+                        </span>
+                        <span class="header-menu-nav-items-show" id="services" onclick="event.stopPropagation()">
+                            <a href="#">services</a>
+                            <i class="fa-solid fa-angle-down" id="angle-services"></i>
+                        </span> 
+                        <span class="header-menu-nav-items-show" id="driver" onclick="event.stopPropagation()">
+                            <a href="#">driver</a>
+                            <i class="fa-solid fa-angle-down" id="angle-driver"></i>
+                        </span>
+                        <span class="header-menu-nav-items-show" id="merchant" onclick="event.stopPropagation()">
+                            <a href="#">merchant</a> 
+                            <i class="fa-solid fa-angle-down" id="angle-merchant"></i>
+                        </span>
+                        <span class="header-menu-nav-items">
+                            <a href="#">blog</a>
+                        </span>
+                        <span class="header-menu-nav-items">
+                            <a href="#">help center</a>
+                        </span>
+                    </div>
+                    <div class="header-menu-language" id="language" onclick="event.stopPropagation()">
+                        <i class="fa-sharp fa-solid fa-language" id="option-language"></i>
+                        <span class="language" id="show-language">EN</span>
+                        <i class="fa-solid fa-angle-down" id="angle-language" style="margin-left:4px"></i>
+                        <div class="language-sub hidden" id='option'>
+                            <div class="language-toggle vietnam">
+                                <p>Vietnam</p>
+                                <span class="check-icon hidden">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                            </div>
+                            <div class="language-toggle english">
+                                <p>English</p>
+                                <span class="check-icon hidden" style="display: inline">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="menu-sub">
+                        <div class="menu-drop" id="service-sub" onclick="event.stopPropagation()" style="display: none;">
+                            <a href="">
+                                <img src = "https://lelogama.go-jek.com/component/nav/picture/2022-goride.png">
+                            </a>
+                            <a href="">
+                                <img src = "https://lelogama.go-jek.com/component/nav/picture/2022-gofood.png">
+                            </a>
+                            <a href="">
+                                <img src = "https://lelogama.go-jek.com/component/nav/picture/2022-gosend.png">
+                            </a>
+                            <a href="">
+                                <img src = "https://lelogama.go-jek.com/component/nav/picture/2022-gocar.png">
+                            </a>
+                        </div>
+                        <div class="menu-drop" id="driver-sub" onclick="event.stopPropagation()" style="display: none;">
+                            <a href="">Driver Landing Page</a>
+                            <a href="">
+                                GoRide Registration</a>
+                            <a href="">
+                                GoCar Registration</a>
+                            <a href="">
+                                Driver's Blog</a>
+                            <a href="">GoCaptain</a>
+                        </div>
+                        <div class="menu-drop" id="merchant-sub" onclick="event.stopPropagation()" style="display: none;">
+                            <a href="">GoFood Partners</a>
+                            <a href="">
+                                Become a GoFood Partner</a>
+                            <a href="">
+                                Claim GoBiz Account</a>
+                            <a href="">
+                                Merchant's Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu">
+        <div class="mobile-menu-icon" onclick="changeIcon(this)">
+            <span class="menu-icon-bar1"></span>
+            <span class="menu-icon-bar2"></span>
+            <span class="menu-icon-bar3"></span>
+        </div>
+        <div class="mobile-navigation">
+            <div class="mobile-navigation-logo">
+                <img src="https://lelogama.go-jek.com/service_icon_text/gojek-horizontal-logo-white.svg" alt="">
+            </div>
+            <div class="mobile-navigation-language">
+                <div class="mobile-navigation-language-select">
+                    <p>Language</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <ul class="mobile-navigation-language-switcher">
+                    <li><a href="#">Vietnam</a></li>
+                    <li><a href="#">Engish</a></li>
+                </ul>
+            </div>
+            <div class="mobile-navigation-treemenu">
+                <ul class="mobile-navigation-treemenu-wrapper">
+                    <li class="mobile-navigation-treemenu-wrapper-list"><a href="#">About Us</a></li>
+                    <li class="mobile-navigation-treemenu-wrapper-list">
+                        <span class="mobile-navigation-treemenu-wrapper-list-items">
+                            <a href="#">Service</a>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </span>
+                        <div class="mobile-navigation-treemenu-wrapper-list-content">
+                            <div class="treemenu-wrapper-list-content-title">
+                                <i class="fa-solid fa-angle-left"></i>
+                                <p>Services</p>
+                            </div>
+                            <div class="treemenu-wrapper-list-content services">
+                                <ul class="list-items">
+                                    <li><a href="#">GoRide</a></li>
+                                    <li><a href="#">GoFood</a></li>
+                                    <li><a href="#">GoSend</a></li>
+                                    <li><a href="#">GoCar</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mobile-navigation-treemenu-wrapper-list">
+                        <span class="mobile-navigation-treemenu-wrapper-list-items">
+                            <a href="#">Driver</a>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </span>
+                        <div class="mobile-navigation-treemenu-wrapper-list-content">
+                            <div class="treemenu-wrapper-list-content-title">
+                                <i class="fa-solid fa-angle-left"></i>
+                                <p>Driver</p>
+                            </div>
+                            <div class="treemenu-wrapper-list-content driver">
+                                <ul class="list-items">
+                                    <li><a href="#">Driver Landing Page</a></li>
+                                    <li><a href="#">GoRide Registration</a></li>
+                                    <li><a href="#">GoCar Registration</a></li>
+                                    <li><a href="#">Driver's Blog</a></li>
+                                    <li><a href="#">GoCaptain</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mobile-navigation-treemenu-wrapper-list">
+                        <span class="mobile-navigation-treemenu-wrapper-list-items">
+                            <a href="#">Merchant</a>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </span>
+                        <div class="mobile-navigation-treemenu-wrapper-list-content">
+                            <div class="treemenu-wrapper-list-content-title">
+                                <i class="fa-solid fa-angle-left"></i>
+                                <p>Merchant</p>
+                            </div>
+                            <div class="treemenu-wrapper-list-content driver">
+                                <ul class="list-items">
+                                    <li><a href="#">GoFood Partners</a></li>
+                                <li><a href="#">Become a GoFood Partner</a></li>
+                                <li><a href="#">Claim GoBiz Account</a></li>
+                                <li><a href="#">Merchant's Blog</a></li>
+                                <li><a href="#">GoCaptain</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mobile-navigation-treemenu-wrapper-list"><a href="#">Blog</a></li>
+                    <li class="mobile-navigation-treemenu-wrapper-list"><a href="#">Help Center</a> </li>
+                </ul>
+            </div>
+
+            
+        </div>
+    </div>
+    <main id="main">
+        <div class="banner-full">
+            <div class="banner-slide">
+                <div class="banner-slide-show">
+                    <img src="https://lelogama.go-jek.com/cache/19/71/19718c504f89c4005018c9771d4ad7a9.webp" alt="" class="banner-full">
+                    <div class="banner-slide-first-content container">
+                        <div class="banner-slide-first-content-inside">
+                            <h1 class="banner-slide-first-slogan">go anywhere, let's book goride</h1>
+                            <p class="banner-slide-first-title">
+                                Quick booking, fast pickup.<br>
+                                You always have GoRide
+                            </p>
+                            <div class="banner-slide-first-button">
+                                <button type="button">play now</button>
+                                <button type="button">download now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-slide-show">
+                    <img src="https://lelogama.go-jek.com/cache/83/c6/83c6704867a35a582686b138ea1098b1.webp" class="banner-full"></img>
+                    <div class="banner-slide-second-content container">
+                        <div class="banner-slide-second-content-inside">  
+                            <h1 class="banner-slide-second-slogan">go anywhere, let's book gocar</h1>
+                            <p class="banner-slide-second-title">
+                                Cool air, soft seat, safe experiences.<br>
+                                You always have GoCar
+                            </p>
+                            <div class="banner-slide-second-button">
+                                <button type="button">play now</button>
+                                <button type="button">download now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-dots">
+                <span class="dot active" id="dot1th"></span>
+                <span class="dot" id="dot2th"></span>
+            </div>
+
+        </div>
+        <section id="information">
+            <div class="information-content container">
+                <div class="information-image">
+                    <img src="https://lelogama.go-jek.com/cache/37/a9/37a9bf78cdf7e531db53358a87ad6f11.webp" alt="This is an image">
+                </div>
+                <div class="information-text">
+                        <p class="information-text-top">To improve people’s lives, we don’t think adding more stuff would do any good. Quite the opposite. We believe it’s about removing obstacles that make us lose focus on the things that matters. Getting rid of inefficiencies, stealing time from things we rather would be doing. And eliminating hassles getting in the way of us spending time with our loved ones. That would do good.</p>
+                        <p class="information-bottom">No more hiccups testing our temper. No more bumps on the road draining our energy. No more friction getting to our heads.<br>
+                        Therefore we’ll <b>always strive to make things run smoother, faster and easier.</b> And it’s in our DNA to think there’s a hack for every difficulty, , a remedy for every headache and a shortcut around.</p>
+                </div>
+            </div> 
+        </section>
+        <section id="service-wraper">
+            <div class="service-wraper-content container">
+                <div class="service-wraper-content-title">
+                    <h1>What's on Gojek</h1>
+                </div>
+                <div class="service-wraper-list">
+                    <div class="service-wraper-list-items">
+                        <div class="list-items-card">
+                            <div class="list-items-card-image">
+                                <img src="https://lelogama.go-jek.com/cache/18/82/1882d0be837a38e52f7200f1cf49f1f8.webp" alt="Goride">
+                            </div>
+                            <div class="list-items-card-text">
+                                <div class="list-items-card-text-top">
+                                    <h1>GoRide</h1>
+                                </div>
+                                <div class="list-items-card-text-bottom">
+                                    <div class="list-items-card-text-review">
+                                        <p>Make commuting comfortable – get across town and through traffic at affordable prices</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items-card">
+                            <div class="list-items-card-image">
+                                <img src="https://lelogama.go-jek.com/cache/b5/ad/b5adc07f0597e975e594522cd4dcaf97.webp" alt="Gofood">
+                            </div>
+                            <div class="list-items-card-text">
+                                <div class="list-items-card-text-top">
+                                    <h1>GoFood</h1>
+                                </div>
+                                <div class="list-items-card-text-bottom">
+                                    <div class="list-items-card-text-review">
+                                        <p>Feast at home – tons of great dishes and promos with just a tap</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items-card">
+                            <div class="list-items-card-image">
+                                <img src="https://lelogama.go-jek.com/cache/5a/c4/5ac459b11afc20acd608aab231aadf22.webp" alt="Gorsend">
+                            </div>
+                            <div class="list-items-card-text">
+                                <div class="list-items-card-text-top">
+                                    <h1>GoSend</h1>
+                                </div>
+                                <div class="list-items-card-text-bottom">
+                                    <div class="list-items-card-text-review">
+                                        <p>Sign, seal, deliver – send goods, gifts, and parcels when you want</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items-card">
+                            <div class="list-items-card-image">
+                                <img src="https://lelogama.go-jek.com/cache/43/6b/436bd80f3d01f42cf48310d60520d33b.webp" alt="Gocar">
+                            </div>
+                            <div class="list-items-card-text">
+                                <div class="list-items-card-text-top">
+                                    <h1>GoCar Protect</h1>
+                                </div>
+                                <div class="list-items-card-text-bottom">
+                                    <div class="list-items-card-text-review">
+                                        <p>Sit back. Sleep. Snore. Be comfortable</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="how-to-use-wraper">
+            <div class="how-to container">
+                <div class="how-to-title">
+                    <p class="how-to-title-text">How to use Gojek</p>
+                </div>
+                <div class="how-to-content">
+                    <div class="how-to-content-step">
+                        <div class="how-to-content-step-number">
+                            <div class="how-to-content-step-number-content select">
+                                <div class="how-to-content-step-number-content-title">
+                                    <p>1. Choose a service</p>
+                                </div>
+                                <div class="how-to-content-step-number-content-title-text">
+                                    <p>Select GoRide, GoFood, or GoSend</p>
+                                </div>
+                            </div>
+                            <div class="how-to-content-step-number-content">
+                                <div class="how-to-content-step-number-content-title">
+                                    <p>2. Put in your details</p>
+                                </div>
+                                <div class="how-to-content-step-number-content-title-text">
+                                    <p>Enter in your addresses</p>
+                                </div>
+                            </div>
+                            <div class="how-to-content-step-number-content">
+                                <div class="how-to-content-step-number-content-title">
+                                    <p>3. Enjoy the journey</p>
+                                </div>
+                                <div class="how-to-content-step-number-content-title-text">
+                                    <p>Get ready for your ride/food/delivery</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="how-to-content-slide">
+                        <img src="https://lelogama.go-jek.com/cache/9d/f9/9df98bc2a80a64b41cd370500c6ab51c.webp" class="slide-step" alt="Step 1">
+                        <img src="https://lelogama.go-jek.com/cache/79/3b/793b931503a28c6255f59567a49c0544.webp" class="slide-step" alt="Step 2">
+                        <img src="https://lelogama.go-jek.com/cache/4b/db/4bdbe2d750ad1be4e076a23aab9f483e.webp" class="slide-step" alt="Step 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="information">
+            <div class="information-content service container">
+                <div class="information-image phone">
+                    <img src="https://lelogama.go-jek.com/cache/22/f7/22f7b29548e768b617f676fee9f1814a.webp" alt="This is an image">
+                </div>
+                <div class="information-text service">
+                        <h2 class="">Want on-demand services that won't break your bank?</h2>
+                        <p class="information-bottom">We're here to help – try Gojek and experience it yourself!
+                        </p>
+                        <button class="information-button">Download now</button>
+                </div>
+            </div> 
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer-wraper">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-top-img">
+                        <img src="https://lelogama.go-jek.com/service_icon_text/gojek-horizontal-logo-white.svg" alt="">
+                    </div>
+                    <div class="footer-top-column">
+                        <div class="column-left">
+                            <div class="column">
+                                <ul class="column-list">
+                                    <li class="column-list-items"><a href="#">About Us</a></li>
+                                    <li class="column-list-items"><a href="#">Blog</a></li>
+                                    <li class="column-list-items"><a href="#">Help Center</a></li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <ul class="column-list">
+                                    <li class="column-list-items"><a href="#">Terms and Policies</a></li>
+                                    <li class="column-list-items"><a href="#">Cookie Settings</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column-right">
+                            <div class="column-right-wraper">
+                                <div class="column-connect">
+                                    <p class="column-text connect">
+                                        Connect with us</p>
+                                    <div class="column-connect-social">
+                                        <a href="#" class="social-icon">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fa-brands fa-youtube"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="column-download">
+                                    <p class="column-text downloand">Download the app</p>
+                                    <div class="column-app">
+                                        <a href="#" class="column-app-nav"><img src="https://lelogama.go-jek.com/cache/60/3e/603e52db090253e5e84d75668ef9c6c3.webp" alt="CH Play"></a>
+                                        <a href="#" class="column-app-nav"><img src="https://lelogama.go-jek.com/cache/8f/81/8f81f0702c661ddd17a8a6a4c2ec7dd6.webp" alt="Apple Store"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-middle">
+                    <div class="footer-middle-info">
+                        <div class="column-info">
+                            <p class="column-info-text">Go Viet Technology Trading Company Limited<br>
+                                Address: 19th floor, Pearl Plaza tower (office area),<br>
+                                561A Dien Bien Phu Street, Ward 25, Binh Thanh District, Ho Chi Minh City, Vietnam<br>
+                                Business code: 0314924845<br>
+                                Legal Representative: Phung Tuan Duc<br>
+                                Position: General Director</p>
+                        </div>
+                        <div class="column-info-right">
+                            <p class="info-right-title">Certificated</p>
+                            <div class="info-right-image">
+                                <img src="https://lelogama.go-jek.com/gojek/media/images/20150827110756-dadangky.png" alt="certificated">
+                                <img src="https://lelogama.go-jek.com/gojek/media/images/logoSaleNoti.png" alt="certificated">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-wraper">
+                        <div class="footer-bottom-empty"></div>
+                        <div class="footer-toggle">
+                            <div class="footer-toggle location" onclick="event.stopPropagation()">
+                                <div class="footer-toggle-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="footer-toggle-option">
+                                    <div class="select-drop country" style="display: none;">
+                                        <ul class="select-drop-items">
+                                            <li class="country-items active">
+                                                Vietnam</li>
+                                            <li class="country-items">Thailand</li>
+                                            <li class="country-items">Singapore</li>
+                                            <li class="country-items">Indonesia</li>
+                                        </ul>
+                                    </div>
+                                    <div class="option-wraper" >
+                                        <span class="select-country" id="country">Vietnam</span>
+                                        <i class="fa-solid fa-angle-up"></i>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="footer-toggle language" onclick="event.stopPropagation()">
+                                <div class="footer-toggle-icon">
+                                    <i class="fa-sharp fa-solid fa-language"></i>
+                                </div>
+                                <div class="footer-toggle-option">
+                                    <div class="select-drop language" style="display: none;">
+                                        <ul class="select-drop-items">
+                                            <li class="language-items">Vietnam</li>
+                                            <li class="language-items active">English</li>
+                                        </ul>
+                                    </div>   
+                                    <div class="option-wraper">
+                                        <span class="select-language" id="language-option">Engish</span>
+                                        <i class="fa-solid fa-angle-up"></i>
+                                    </div>  
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom-text">
+                        <p class="footer-bottom-text-content">© 2023 Gojek Vietnam Gojek is a trademark of PT Aplikasi Karya Anak Bangsa. Registered in the Directorate General of Intellectual Property of the Republic of Indonesia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script type="text/javascript" src="./header.js"></script>
+    <script type="text/javascript" src="./banner.js"></script>
+    <script type="text/javascript" src="./footer.js"></script>
+    <script type="text/javascript" src="./mainHowto.js"></script>
+    <script type="text/javascript" src="./headerResponsive.js"></script>
+
+</body>
+</html>
