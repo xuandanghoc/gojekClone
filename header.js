@@ -39,6 +39,7 @@ language.addEventListener('click', () => {
 
 for (let i = 0; i < menuNav.length; i++) {
     menuNav[i].addEventListener('click', () => {
+        event.preventDefault();
         if (menuDrop[i].style.display == 'none') {
             Array.from(menuDrop).forEach((element) => {
                 element.style.display = 'none';

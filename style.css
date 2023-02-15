@@ -62,7 +62,7 @@
 
 .header-menu .fa-solid.fa-angle-down {
     font-size: 0.8rem;
-    transition: all ease-out 0.5s;
+    transition: all ease-out 0.3s;
 }
 .fa-solid.fa-angle-down.rotation-up {
     transform: rotate(-180deg);
@@ -299,6 +299,7 @@
 .banner-full .banner-dots {
     text-align: center;
     margin-top: 0.5rem;
+    position: relative;
 }
 .banner-full .banner-dots .dot {
     width:0.5rem;
@@ -409,13 +410,47 @@
     line-height: 64px;
     letter-spacing: .8px;
 }
-
+.how-to-content-slide .slide-container {
+    transition: ease 0.3s;
+        /* width: 29.5rem;
+        height: 33rem; */
+}
 .how-to-content-slide img {
     width: 29.5rem;
     height: 33rem;
 }
-.how-to-content-slide img:not(:first-child) {
-    display: none;
+.how-to-content>div {
+    /* width: 50%; */
+}
+.how-to-content .how-to-content-empty {
+    /* width: 400px; */
+}
+.how-to-content .how-to-content-slide {
+    
+}
+.how-to-content-slide .slide-container {
+    overflow: hidden; 
+    /* display: flex; */
+    /* justify-content: end; */
+    /* width: 29.5rem;
+    height: 33rem;  */
+
+
+
+}
+.slide-container .slide-lists {
+    display: flex;
+    flex: 1 0 100%; 
+    /* justify-content: end; */
+    /* overflow: hidden; */
+    /* width: 100%; */
+    width: 500px;
+    transition: 0.3s;
+
+}
+.slide-container .slide-lists .slide-lists-image {
+    display: flex;
+    transition: 0.3s;
 }
 .how-to-content-step-number .how-to-content-step-number-content {
     padding: 24px 32px;
@@ -658,7 +693,7 @@ transition: all ease-out 0.5s;
 .select-drop-items .language-items.active {
     background-color: #111;
 }
-.mobile-menu {
+.mobile-menu.hidden {
     display: none;
 }
 
