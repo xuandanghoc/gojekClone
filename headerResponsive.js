@@ -36,8 +36,8 @@ let serviceBoxs = document.getElementsByClassName('list-items-card');
 let positionX = 0;
 let box = document.querySelector('.service-wraper-list-items');
 let dotsBox = document.getElementsByClassName('dot-box');
-lists = document.querySelector('.list-items-card');
-letserviceBoxsWidth = lists.offsetWidth;
+lists = document.querySelector('.service-wraper-list');
+letserviceBoxsWidth = 675;
 let count = [];
 for (let x = 0; x < 4; x++) {
     count.push(x);
@@ -55,33 +55,11 @@ let slideBox = (e) => {
     positionX = -(letserviceBoxsWidth * count[e]);
     box.style = `transform:translateX(${positionX}px)`;
     dotsBox[e].className += ' active';
-}
-// window.addEventListener('mousemove', () => {
-//     for (let i = 0; i < dotsBox.length; i++) {
-//         slideBox(i);
-//     }
-//     // console.log('hi');
+};
 
-// })
-
-let listSlides = document.getElementsByClassName('slide');
-
-
-    Array.from(steps).forEach((step, index) => {
-        step.addEventListener('click', () => {
-            if (document.body.offsetWidth < 769) {
-                Array.from(steps).forEach((element) => {
-                    element.className = element.className.replace('select', '');
-                });
-                Array.from(listSlides).forEach((slide) => {
-                    slide.style.display = 'none';
-                });
-                listSlides[index].style.display = 'block';
-                steps[index].className += ' select';
-            }
-            
-        });
-    });
+    if (window.innerWidth == 1440) {
+        box.className += ' raw';
+    }
 
 
 

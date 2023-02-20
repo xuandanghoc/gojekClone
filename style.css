@@ -36,13 +36,15 @@
 
 #header .header-menu .header-menu-logo {
     cursor: pointer;
+    width: 10%;
 }
 .header-menu .header-menu-logo img {
     width: 6rem;
     height: 1.8rem;
 }
-.header-menu-empty {
-    width: 30%;
+.header-menu .header-menu-nav {
+    width: 80%;
+    text-align: end;
 }
 
 #header .header-menu-nav>span {
@@ -89,6 +91,9 @@
     display: flex;
     align-items: center;
     position: relative;
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
 }
 .header-menu .header-menu-language #option-language {
     margin-right:4px;
@@ -360,12 +365,15 @@
     object-fit: contain;
 }
 
-.service-wraper-list-items {
+.service-wraper-list-items .service-wraper-list-items-flex {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 2rem;
     align-items: center;
     padding: 1rem;
+}  
+.lists .service-wraper-list-items {
+    transform: none;
 }
 
 .service-wraper-list-items .list-items-card {
@@ -377,6 +385,7 @@
     border-radius: 1rem;
     box-shadow: 0 2px 6px 0 rgb(0 0 0 / 20%);
     cursor: pointer;
+    transition: ease 0.3s;
 }
 .service-wraper-list-items .list-items-card:hover {
     box-shadow: 0 9px 24px 0 rgb(0 0 0 / 20%);
@@ -386,6 +395,23 @@
     margin-top: 1rem;
     line-height: 1.5;
 }
+.service-wraper-content .service-dots {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+} 
+.service-wraper-content .service-dots .dot-box {
+    width:0.5rem;
+    height: 0.5rem;
+    display: inline-block;
+    background-color: rgb(232,232,232);
+    border-radius: 50%;
+    margin:0.2rem;
+    cursor: pointer;
+}
+.service-dots .dot-box.active {
+    background-color: rgb(4,169,20);
+} 
 
 .list-items-card-text-top h1 {
     font-size: 18px;
