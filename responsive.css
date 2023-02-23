@@ -10,6 +10,8 @@
         /* display: none; */
 
     }
+    .js .accordion:nth-child(n+1) { display: none }
+
     .header-menu {
         max-height: 57px;
         width: 100%;
@@ -136,13 +138,8 @@
         display: none;
     }
     .mobile-navigation-language-switcher li {
-        display: inline-block;
         width: 50%;
         text-align: center;
-        padding: 11px 16px;
-        border: 1px solid rgb(4,169,20);
-        border-radius: 24px;
-        margin-top: 16px;
     }
     .mobile-navigation-language-switcher li:last-child {
         margin-left: 16px;
@@ -152,6 +149,15 @@
         font-size: 16px;
         line-height: 1.5rem;
         font-weight: 550;
+        padding: 11px 16px;
+        border: 1px solid rgb(4,169,20);
+        border-radius: 24px;
+        display: inline-block;
+        width: 100%;
+    }
+    .mobile-navigation-language-switcher .language-select-mobile.active {
+        background-color: rgb(4,169,20);
+        color: #fff;
     }
     .mobile-navigation-treemenu {
         margin-top: 24px;
@@ -182,9 +188,7 @@
         font-size: 16px;
 
     }
-    .mobile-navigation-treemenu-wrapper-list-content {
-        /* display: none; */
-    }
+    
     .treemenu-wrapper-list-content.services .services-list li {
         margin: 0 0 24px 40px;
 
@@ -283,7 +287,6 @@
         justify-content: flex-start;
         padding: 8px;
         width: 670px;
-        transform: translateX(0);
     } 
     .service-wraper-list-items .service-wraper-list-items-flex {
         display: flex;
@@ -362,17 +365,18 @@
     .how-to-content-slide .slide-lists {
         display: flex;
         width: 100%;
-        /* justify-content: flex-end; */
         transition: 0.01s;
     }
-    .how-to-content-slide .slide-lists .slide-lists-image {
-    }
+    
     .how-to-content-slide img:not(:first-child) {
         display: block;
     }
     .how-to-content-slide img {
-        width: 345px;
+        width: 100%;
         height: 384px;
+    }
+    .how-to-content-slide .slide-container .slide-lists {
+        width: 345px;
     }
 
 
@@ -404,10 +408,10 @@
     }
     .column-download .column-app>a {
         display: inline-block;
-        width: 50%;
+        width: 47.5%;
     }
-    .column-download .column-app>a img {
-        width: 95%;
+    .column-download .column-app .column-app-nav img {
+        width: 100%;
         margin: 0;
     }
     .footer-bottom .footer-bottom-wraper {

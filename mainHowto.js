@@ -1,30 +1,29 @@
 let steps = document.getElementsByClassName('how-to-content-step-number-content');
 let slideLists = document.getElementsByClassName('slide');
 let slideSteps = document.getElementsByClassName('slide-step');
-let slideWidth = slideLists[0].offsetWidth;
-let slideWrapper = document.querySelector('.slide-lists');
-let positionSlide = 0;
 
 Array.from(steps).forEach((step, index) => {
     step.addEventListener('click', () => {
-        changSlide(index);
+        changeSlide(index);
     });
 });
 
-let changSlide = (n) => {
+window.addEventListener('resize', () => {
+    for (let i = 0; i < steps.length; i++) {
+        changeSlide(i);
+    }
+})
+
+let changeSlide = (n) => {
     Array.from(steps).forEach((element) => {
         element.className = element.className.replace('select', '');
-    })
+    });
+    let slideWidth = slideLists[0].offsetWidth;
     positionX = -(slideWidth * count[n]);
+    let slideWrapper = document.querySelector('.slide-lists');
     slideWrapper.style = `transform:translateX(${positionX}px)`;
     steps[n].className += ' select';
 };
-
-    // slideLists[0].addEventListener('mouseup', () => {
-    //     slideWrapper.style = `transform:translateX(${-472}px)`;
-    // });
-
-// window.addEventListener('resize', changSlide);
 
 
 // let currentPromise = new Promise((resolve, reject) => {
@@ -57,12 +56,4 @@ let changSlide = (n) => {
 //     req.send();
 // });
 
-window,addEventListener('resize', () => {
-    if (window.innerWidth < 769) {
-        for (let i = 0; i < steps; i++) {
-            steps[i].addEventListener('click', () => {
-                changSlide(i);
-            })
-        }
-    }
-})
+

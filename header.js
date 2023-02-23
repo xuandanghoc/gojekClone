@@ -60,9 +60,9 @@ let select = ['VN', 'EN'];
 let languageSpan = document.getElementById('show-language');
 
 let icons = document.getElementsByClassName('check-icon');
-let languageElement = document.getElementsByClassName('language-toggle');
+let languageElements = document.getElementsByClassName('language-toggle');
 for (let i = 0; i < icons.length; i++) {
-    languageElement[i].addEventListener('click', () => {
+    languageElements[i].addEventListener('click', () => {
         changeLanguage(i)
     });
 };
@@ -74,11 +74,15 @@ let changeLanguage = (index) => {
     Array.from(icons).forEach((icon) => {
         icon.style.display = 'none';
     });
+    Array.from(languageMobiles).forEach((element) => {
+        element.className = element.className.replace(' active', '');
+    });
     let text = languageLists[index].textContent;
         languageSelect.innerHTML = text;
         languageLists[index].className += ' active';
         languageSpan.innerHTML = select[index];
         icons[index].style.display = 'inline';
+        languageMobiles[index].className += ' active';
 }
 
 

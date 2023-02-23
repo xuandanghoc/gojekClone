@@ -57,9 +57,24 @@ let slideBox = (e) => {
     dotsBox[e].className += ' active';
 };
 
-    if (window.innerWidth == 1440) {
-        box.className += ' raw';
-    }
+window.addEventListener('resize', () => {
+    positionX = 0;
+    box.style = `transform:translateX(${positionX}px)`;
+    Array.from(dotsBox).forEach((dot) => {
+        dot.className = dot.className.replace(' active', '');
+    });
+    dotsBox[0].className += ' active';
+});
+
+
+let languageMobiles = document.getElementsByClassName('language-select-mobile');
+
+Array.from(languageMobiles).forEach((option, index) => {
+    option.addEventListener('click', () => {
+        changeLanguage(index);
+    })
+})
+
 
 
 
